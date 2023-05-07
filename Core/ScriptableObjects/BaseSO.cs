@@ -1,6 +1,8 @@
+// #FrameworkScript
+
 using UnityEngine;
 
-namespace Fierclash.DataStruct
+namespace Fierclash.Core
 {
 	/// <summary>
 	/// Generic ScriptableObject for containing data of type T.

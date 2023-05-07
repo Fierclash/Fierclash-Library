@@ -1,6 +1,8 @@
+// #DataStructScript
+
 using UnityEngine;
 
-namespace Fierclash.DataStruct
+namespace Fierclash.Core
 {
 	/// <summary>
 	/// ScriptableObject containing Vector4 data.
