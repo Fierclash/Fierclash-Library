@@ -8,7 +8,7 @@ namespace Fierclash.Core
 	/// Generic ScriptableObject for containing data of type T.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
-	public class BaseSO<T> : ScriptableObject
+	public abstract class BaseSO<T> : ScriptableObject
 	{
 		[Tooltip("Data SO holds.")]
 		[SerializeField]
