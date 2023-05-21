@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace Fierclash
+namespace Fierclash.Core
 {
 	/// <summary>
 	/// Monobehaviour that implements the Singleton pattern.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
-	public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+	public abstract class SingletonBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 	{
 		/// <summary>
 		/// Static reference to a singleton instance.
@@ -24,19 +24,13 @@ namespace Fierclash
 			// Otherwise, destroy this object
 			else Destroy(this);
 		}
-
-		private void OnApplicationQuit()
-		{
-			//Instance = null;
-			//Destroy(this);
-		}
 	}
 
 	/// <summary>
 	/// Monobehavior that implements singleton pattern with persisting behavior.
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
-	public abstract class PersistentSingleton<T> : MonoBehaviour where T : MonoBehaviour
+	public abstract class PersistentSingletonBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 	{
 		/// <summary>
 		/// Static reference to a singleton instance.
@@ -61,17 +55,5 @@ namespace Fierclash
 				Destroy(this);
 			}
 		}
-
-		private void OnApplicationQuit()
-		{
-			//Instance = null;
-			//Destroy(this);
-		}
 	}
-
-
-	/// <summary>
-	/// Base Singleton with no implementation.
-	/// </summary>
-	public sealed class BaseSingleton : Singleton<BaseSingleton> { }
 }
